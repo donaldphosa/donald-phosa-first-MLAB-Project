@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/login.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    
+<link rel="stylesheet" href="./login page_files/login.css"></head>
+<body>
+
+    <div class="form-login">
+        <div class="desc">
+            <h1 class="heading">Sign in with your Amazon login</h1>
+    
+            <label for="email" class="input-text">Email or mobile phone number</label><br>
+            <input type="text" id="email"><br>
+            <label for="password" class="input-text">password<span><a href="http://127.0.0.1:5500/login.html#">forgot your password</a></span></label><br>
+            <input type="text" id="password"><br>
+           <button class="signin">Sign in</button>
+           <p class="terms">
+               by continuing , you agree to amazon's condition of use. you can find the privacy notice that applies to you <a href="http://127.0.0.1:5500/login.html#">here</a>
+           </p>
+           <p class="call">new to amazon?</p>
+           <button class="signup"><a href="http://127.0.0.1:5500/signup.html">Create your account</a></button>
+           
+        </div>
+    
+    </div>
+
+    
+    <div class="form">
+        <div class="desc">
+            <h1 class="heading">Sign in with your Amazon login</h1>
+
+            <label for="name" class="name">Name</label><br>
+            <input type="text" id="name">
+            <label for="email" class="input-text">Email or mobile phone number</label><br>
+            <input type="text" id="email"><br>
+            <label for="password" class="input-text">password</label><br>
+            <input type="text" id="password" placeholder="atleast 6 charecters"><br>
+            <label for="password" class="input-text"> re enter your password</label><br>
+            <input type="text" id="password" placeholder="atleast 6 charecters"><br>
+            <p class="terms">
+                by continuing , you agree to amazon's condition of use. you can find the privacy notice that applies to you <a href="http://127.0.0.1:5500/login.html#">here</a>
+            </p>
+           <button class="signup">Sign up</button>
+
+           <a href="http://127.0.0.1:5500/login.html#login.html" class="back-btn">back</a>
+          
+        </div>
+    
+    </div>
+  
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>

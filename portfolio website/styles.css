@@ -1,0 +1,551 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background: #f9f9f9;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 2.5rem;
+    width: 100%;
+    
+}
+a{
+    color: rgb(152, 152, 209);
+}
+/* dont forget to change the display */
+.container{
+    display: none;
+    /* border: 3px solid #000; */
+    background: #f3f3f3;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 15px 0;
+    width: 100%;
+    padding-right: 15px;
+    /* margin-top: 5rem; */
+    /* box-sizing: border-box; */
+    /* margin-bottom: 2.5rem; */
+
+}
+/* styling now side bar menu */
+.side-bar{
+    margin-right: 6.5rem;
+    /* align-items: flex-start; */
+    text-align: left;
+}
+.pic{
+    margin-right: 10px;
+}
+.user-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+.profile{
+    padding: 15px 0;
+    padding-left: 2.5rem;
+    width: 150px;
+    height: 200px;
+    background: #3E5151;
+    background: -webkit-linear-gradient(to right, #afada8, #758585); 
+    background: linear-gradient(to right, #afada8, #758585);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+.greetings{
+    color: #444343;
+    margin-bottom: 5px;
+}
+.settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0;
+    padding-left: 2.5rem;
+    width: 120px;
+    height: 340px;
+    /* box-sizing: border-box; */
+    font-size: 12px;
+    margin-top: 3.8rem;
+    align-items: flex-start;
+}
+.settings img{
+   width: 15px;
+   height: 15px;
+
+}
+.settings span{
+    margin-left: 8px;
+    box-sizing: border-box;
+   
+}
+
+.settings p{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+   
+}
+
+.logo{
+    padding: 15px 0;
+    width: 150px;
+    height: auto;
+    margin-top: 6rem;
+    margin-left: 1.9rem;
+}
+.logo h4{
+    font-size: 0.7rem;
+}
+.logo h4 span{
+    font-size: 1.2rem;
+    color: orange;
+    margin-top: 6px;
+    
+}
+.settings p .board-icon{
+  width: 24px;
+  height: 24px;
+}
+
+/* styling now top navigation bar */
+.hearder-logo{
+    color: orange;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+.navbar .right-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.navbar .search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 11px 18px;
+    margin: 0 30px;
+   
+}
+.navbar .search .search-icon{
+    width: 24px;
+    height: 24px;
+    
+}
+.navbar .search .find{
+    outline: none;
+    border: none;
+    width: 300px;
+}
+.navbar .new-release{
+    margin: 0 30px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+.new-release-books{
+    width: 65%;
+    box-sizing: border-box;
+    
+}
+.hero-content{
+    width: 100%;
+    overflow: hidden;
+}
+.featured{
+    margin: 0 30px;
+    cursor: pointer;
+}
+.grid{
+    margin: 0 30px;
+    width: 20px;
+    height: 20px;
+}
+/* styling book section */
+
+.books{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    height: 130px;
+    border-radius: 10px;
+    background: #3E5151;
+    background: -webkit-linear-gradient(to right, #afada8, #758585); 
+    background: linear-gradient(to right, #afada8, #758585);
+    position: relative;
+    min-width: 340px;
+    margin-right: 20px;
+    user-select: none;
+
+}
+.read-books{
+    display: block;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 4.5rem;
+    height: 40%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+.book-cover{
+    position: absolute;
+    top: -80px; 
+    border-radius: 15px;
+    width: 110px;
+    height: 170px;
+}
+.new-head{
+    text-align: left;
+    font-weight: bold;
+}
+
+.section-head{
+    margin-bottom: 7.5rem;
+    text-align: left;
+    font-weight: bold;
+    
+}
+.row{
+    display: flex;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #f3f3f3;
+    font-weight: 500;
+    overflow-x: hidden;
+    width: 100%;
+}
+.pages{
+    margin-right: 5px;
+}
+.chapters{
+    margin-right: 5px;
+}
+.book-title{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f3f3f3;
+}
+.main-row{
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    /* overflow-x: hidden; */
+    height: auto;
+
+    scroll-behavior: smooth;
+}
+.book-description{
+    text-align: left;
+}
+.book-title{
+    font-size: .7rem;
+    margin-left: 10px;
+}
+.new-release{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.5rem;
+    box-sizing: border-box;
+}
+.famous-authors{
+    padding: 0 10px;
+    background: #ADA996; 
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2);  
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2); 
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.auther{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+.num-books{
+    font-size: 12px;
+    margin-top: 5px;
+}
+.fam-auth-list{
+    display: flex;
+    align-items: center;
+}
+.new-book-cover{
+    width: 130px;
+    height: 180px;
+    margin-top: 15px;
+    border-radius: 12px;
+    margin-bottom: 5px;
+}
+.new-book{
+    text-align: center;
+    box-sizing: border-box;
+    width: 101px;
+    /* margin-right: 2.5rem; */
+}
+.new-author-name{
+    font-size: 12px;
+    margin-top: 5px;
+}
+.b-dces{
+    margin-top: 5px;
+    padding: 2px 2.5px;
+    border-radius: 14px;
+    background: #c4c4c4;
+}
+.new-books-list{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/*end of main page or landing page */
+
+html{
+    display: flex;
+}
+
+.form-login{
+    max-width: 420px;
+    display: block;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 25px;
+    margin-top: 1.5rem;
+    position: absolute;
+    transform: translate(-50,-50);
+    transition: all 0.3s ease;
+    margin-top: 2.5rem;
+   box-sizing: border-box;
+   margin-bottom: 5rem;
+}
+.heading{
+    font-size: 1.5rem;
+    color: orange;
+    margin-bottom: 1.5rem;
+}
+#email, #password{
+    margin-top: 2px;
+    margin-bottom: 10px;
+    padding: 10px 7px;
+    width: 350px;
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+
+}
+.signin{
+    padding: 7px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: orange;
+    width: 360px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    
+}
+.input-text{
+    display: flex;
+    margin-bottom: 0;
+    justify-content: space-between;
+    margin-left: 5px;
+    color: rgb(82, 78, 78);
+}
+.input-text a{
+    text-decoration: none;
+}
+.terms{
+    margin-bottom: 2.5rem;
+    color: #c1c1c1;
+}
+.terms a{
+    text-decoration: none;
+    margin-left: 2px;
+}
+.call{
+    font-size: 2rem;
+    font-weight: normal;
+    color: #c7c7c7;
+}
+.signup-log{
+    padding: 10px 14px;
+    outline: none;
+    border: 1px solid orange;
+    border-radius: 4px;
+    background: transparent;
+    color: orange;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+/* styling signup page */
+
+
+
+
+
+
+
+.form{
+    max-width: 420px;
+    width: fit-content;
+    display: none;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 25px;
+    margin-top: 1.5rem;
+    position: absolute;
+    transform: translate(-50,-50);
+    transition: all 0.3s ease;
+}
+.heading{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 20px;
+}
+#email-signup, #password-signup, #password-first, #name{
+    margin-top: 2px;
+    padding: 10px 7px;
+    width: 350px;
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-bottom: 2.5rem;
+
+}
+.signup{
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: orange;
+    width: 360px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    border: 1px solid orange;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    
+    
+}
+.input-text, .name{
+    display: flex;
+    margin-bottom: 0;
+    justify-content: space-between;
+    margin-left: 5px;
+    color: rgb(82, 78, 78);
+}
+.input-text a{
+    text-decoration: none;
+}
+.terms{
+    margin-bottom: 2.5rem;
+    color: #c1c1c1;
+}
+.terms a{
+    text-decoration: none;
+    margin-left: 2px;
+}
+.call{
+    font-size: 2rem;
+    font-weight: normal;
+    color: #c7c7c7;
+}
+.back-btn{
+    padding: 10px 15px;
+    opacity: 0.5;
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+}
+.choseImage{
+    color: orange;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+#userProfile{
+    margin-bottom: 10px;
+}
+
+/* we do scroll this side */
+.scrollClass{
+    display: inline;
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  
+}
+#prevCard{
+    opacity: 1;
+    position: absolute;
+    left: 4px;
+    z-index: 999;
+    top: 50%;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #ccc;
+    
+}
+#nextCard{
+    opacity: 1;
+    position: absolute;
+    right: 4px;
+    z-index: 999;
+    top: 50%; 
+    width: 32px;
+    border-radius: 50%;
+    background-color: #ccc;
+   
+}
+#posi{
+    /* position: relative; */
+}
+#get-o{
+    font-size: 40px;
+    color: orange;
+    position: absolute;
+    top: -30px;
+    right: -14px;
+}
+.dontDisplay{
+    display: none;
+}

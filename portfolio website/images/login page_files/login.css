@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* text-align: center; */
+    /* display: flex; */
+    justify-content: center;
+    
+}
+
+.form-login{
+    max-width: 420px;
+    box-sizing: border-box;
+    width: fit-content;
+    display: flex;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 25px;
+    margin-top: 1.5rem;
+    /* opacity: 0; */
+}
+.heading{
+    font-size: 1.5rem;
+    color: orange;
+    margin-bottom: 1.5rem;
+}
+#email, #password{
+    margin-top: 2px;
+    margin-bottom: 10px;
+    padding: 10px 7px;
+    width: 350px;
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+
+}
+.signin{
+    padding: 7px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: orange;
+    width: 360px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+    
+}
+.input-text{
+    display: flex;
+    margin-bottom: 0;
+    justify-content: space-between;
+    margin-left: 5px;
+    color: rgb(82, 78, 78);
+}
+.input-text a{
+    text-decoration: none;
+}
+.terms{
+    margin-bottom: 2.5rem;
+    color: #c1c1c1;
+}
+.terms a{
+    text-decoration: none;
+    margin-left: 2px;
+}
+.call{
+    font-size: 2rem;
+    font-weight: normal;
+    color: #c7c7c7;
+}
+.signup{
+    padding: 10px 14px;
+    outline: none;
+    border: 1px solid orange;
+    border-radius: 4px;
+    background: transparent;
+
+}
+.signup a{
+    text-decoration: none;
+    color: orange;
+}
+/* styling signup page */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form{
+    max-width: 420px;
+    box-sizing: border-box;
+    width: fit-content;
+    display: flex;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 25px;
+    margin-top: 1.5rem;
+    /* opacity: 0; */
+}
+.heading{
+    font-size: 1.5rem;
+    color: orange;
+    margin-bottom: 1.5rem;
+}
+#email, #password, #name{
+    margin-top: 2px;
+    margin-bottom: 10px;
+    padding: 10px 7px;
+    width: 350px;
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+
+}
+.signup{
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: orange;
+    width: 360px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+    border: 1px solid orange;
+    border-radius: 4px;
+    background: transparent;
+    
+}
+.input-text, .name{
+    display: flex;
+    margin-bottom: 0;
+    justify-content: space-between;
+    margin-left: 5px;
+    color: rgb(82, 78, 78);
+}
+.input-text a{
+    text-decoration: none;
+}
+.terms{
+    margin-bottom: 2.5rem;
+    color: #c1c1c1;
+}
+.terms a{
+    text-decoration: none;
+    margin-left: 2px;
+}
+.call{
+    font-size: 2rem;
+    font-weight: normal;
+    color: #c7c7c7;
+}
+.signup a{
+    text-decoration: none;
+    color: orange;
+}
+.back-btn{
+    padding: 10px 15px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    text-decoration: none;
+}

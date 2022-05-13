@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+<!-- landing page -->
+<div class="container" id="landing-page">
+    <!-- side bar menu and settings -->
+    <div class="side-bar">
+        <div class="profile">
+            <img src=" " class="user-pic" id="loded" alt="profile">
+            <p class="greetings">welcome <br>back</p>
+            <h5 id="user-name">donald</h5>
+        </div>
+        <div class="settings">
+            <p><img src="icons/dashboard.svg" class="board-icon"><span>my<br> profile board</span></p>
+            <p><img src="icons/collections.svg"><span>collection</span></p>
+            <p><img src="icons/saved.svg"><span>saved</span></p>
+            <p><img src="icons/profile.svg"><span>profile</span></p>
+            <p id="logout" ><img src="icons/logout.svg"><span>logout</span></p>
+        </div>
+        <div class="logo"><h4>product of <br><span>MEDIA</span></h4></div>
+
+    </div>
+    <div class="hero-content">
+        <!-- top navbar  -->
+        <nav class="navbar">
+            <h3 class="hearder-logo">MEDIA</h3>
+            <div class="right-nav">
+                <div class="search">
+                    <input id="searchBooks" type="text" class="find" placeholder="search your books">
+                    <img src="icons/search.svg" class="search-icon">
+                </div>
+                <p class="new-release">New Release<span id="get-o">.</span></p>
+                <p class="featured">featured</p>
+                <img src="icons/grid.svg"  class="grid">
+            </div>
+        </nav>
+        <!-- books you read last, section -->
+
+
+        <div class="read-books" id="read-books-section">
+            <h4 class="section-head">Books you read last</h4>
+            <img src="icons/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" id="prevCard">
+               
+                <img src="icons/arrow_forward_FILL0_wght400_GRAD0_opsz48.svg" id="nextCard">
+            <div class="scrollClass" id="scroll">
+                
+            </div>
+           
+        </div>
+
+
+        <!-- new release section -->
+        <div class="new-release">
+            <div class="new-release-books">
+                <p class="new-head">New Release</p>
+                <div class="new-books-list">
+                    <div class="new-book">
+                        <img src="images/new1.jfif" class="new-book-cover">
+                        <p class="Book-desc">The beauty of the road</p> 
+                        <p class="new-author-name">Emily st. john</p> 
+                        <p class="b-dces">mystery</p> 
+                    </div>
+                    <div class="new-book">
+                        <img src="images/new2.jfif" class="new-book-cover">
+                        <p class="Book-desc">The beauty of the road</p> 
+                        <p class="new-author-name">Emily st. john</p> 
+                        <p class="b-dces">mystery</p> 
+                    </div>
+                    <div class="new-book">
+                        <img src="images/new3.jfif" class="new-book-cover">
+                        <p class="Book-desc">The beauty of the road</p> 
+                        <p class="new-author-name">Emily st. john</p> 
+                        <p class="b-dces">mystery</p> 
+                    </div>
+                    <div class="new-book">
+                        <img src="images/new4.jfif" class="new-book-cover">
+                        <p class="Book-desc">The beauty of the road</p> 
+                        <p class="new-author-name">Emily st. john</p> 
+                        <p class="b-dces">mystery</p> 
+                    </div>
+                    <div class="new-book">
+                        <img src="images/newBookCover.jfif" class="new-book-cover">
+                        <p class="Book-desc">The beauty of the road</p> 
+                        <p class="new-author-name">Emily st. john</p> 
+                        <p class="b-dces">mystery</p> 
+                    </div>
+                </div>
+                
+            </div>              
+            <!-- famous author section -->
+        <div class="famous-authors">
+            <div class="fam-auth-list">
+                <div class="author-pic">
+                    <img class="auther" src="images/fam1.jfif">
+                </div>
+                    <div class="auther-details">
+                        <p class="author-name">shake spear</p>
+                        <p class="num-books">15 <span>books</span></p>
+                    </div>
+            </div>
+            <div class="fam-auth-list">
+                <div class="author-pic">
+                    <img class="auther" src="images/author.jfif">
+                </div>
+                    <div class="auther-details">
+                        <p class="author-name">J.K Rowling</p>
+                        <p class="num-books">10 <span>books</span></p>
+                    </div>
+            </div>
+            <div class="fam-auth-list">
+                <div class="author-pic">
+                    <img class="auther" src="images/fam3.jfif">
+                </div>
+                    <div class="auther-details">
+                        <p class="author-name">J.D Matlala</p>
+                        <p class="num-books">15 <span>books</span></p>
+                    </div>
+            </div>
+            <div class="fam-auth-list">
+                <div class="author-pic">
+                    <img class="auther" src="images/fam2.jfif">
+                </div>
+                    <div class="auther-details">
+                        <p class="author-name">D phosa</p>
+                        <p class="num-books">7 <span>books</span></p>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- login sign up page -->
+
+<div class="form-login" id="log-me-in-form">
+    <div class="desc">
+        <h2 class="heading">Sign in with your Amazon login</h2>
+
+        <label for="email" class="input-text">Email or mobile phone number</label><br>
+        <input type="text" id="email"><br>
+        <label for="password" class="input-text">password<span><a href="#" id="forgetPassword">forgot your password</a></span></label><br>
+        <input type="text" id="password" >
+
+       <button type="button" class="signin" id="login-btn" onclick="landingP()">Sign in</button>
+       <p class="terms">
+           by continuing , you agree to amazon's condition of use. you can find the privacy notice that applies to you <a href="#">here</a>
+       </p>
+       <p class="call">new to amazon?</p>
+
+       <button class="signup-log" id="singup-login" onclick="createAcc()">Create your account</button>
+       
+    </div>
+
+</div>
+<!-- sign up form -->
+
+<div class="form" id="sign-me-in-form">
+    <img src="icons/arrow-left.svg" class="back-btn" id="back-to-login">
+    <div class="desc">
+        <h1 class="heading">Sign in with your Amazon login</h1>
+
+        <label for="name" class="name" >Name</label><br>
+        <input type="text" id="name" >
+
+        <label for="email" class="input-text">Email or mobile phone number</label><br>
+        <input type="text" id="email-signup"><br>
+
+        <label for="password" class="input-text" >password</label><br>
+        <input type="text" id="password-first" placeholder="atleast 6 charecters"><br>
+
+        <label for="password" class="input-text" > re enter your password</label><br>
+        <input type="text" id="password-signup" placeholder="atleast 6 charecters"><br>
+
+        <p class="choseImage">upload profile picture</p>
+        <input type="file" id="userProfile"><br>
+        
+        <p class="terms">
+            by continuing , you agree to amazon's condition of use. you can find the privacy notice that applies to you <a href="#">here</a>
+        </p>
+       <button id="button" class="signup" onclick="signupPath()">Sign up</button>
+
+    
+      
+    </div>
+
+</div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
