@@ -70,6 +70,12 @@ function landingP(){
                 signup.style.display = "none";
                 mainPage.style.display = "flex";
                 login.style.display = "none";
+            }else if(userCredentials[i].email == username&&userCredentials[i].password != passcode){
+                alert("enter the correct password")
+                i = userCredentials.length;
+            }else if(userCredentials[i].email != username&&userCredentials[i].password != passcode){
+                alert("the the username does not exist, please sign in instead")
+                i = userCredentials.length;
             }
         }
         
@@ -79,46 +85,61 @@ function landingP(){
 }
 
 logout.addEventListener("click", (e)=>{
-    e.preventDefault()
+            e.preventDefault()
 
-    signup.style.display = "none";
-    mainPage.style.display = "none";
-    login.style.display = "block";
-    
-    
-})
-let nameholder = document.getElementById("name");
-let file = document.getElementById("userProfile")
+            signup.style.display = "none";
+            mainPage.style.display = "none";
+            login.style.display = "block";
+            
+            
+        })
 
-function signupPath(){
-    let newName = nameholder.value
-  let  userNew = newUser.value
-  let  passwordNew = newPassword.value
-  let  repassword = confirmPassword.value
- 
-if(newName && userNew && passwordNew && repassword){
-    if(passwordNew === repassword){
-    user.textContent = newName
-        let newcredentials = {
-            name: newName,
-            email: userNew,
-            password: passwordNew,
-            picPath: uploadedpic
+
+        // sign up logic
+
+        let nameholder = document.getElementById("name");
+        let file = document.getElementById("userProfile")
+
+        function signupPath(){
+        let newName = nameholder.value
+        let  userNew = newUser.value
+        let  passwordNew = newPassword.value
+        let  repassword = confirmPassword.value
+
+        console.log()
+
+        for(let i = 0;i<userCredentials.length;i++){
+            if(userNew.trim() == userCredentials[i].email.trim()){
+                alert("the user already exist, sign in instead!!")
+                i = userCredentials.length;
+            }else if(newName && userNew && passwordNew && repassword){
+
+                if(passwordNew === repassword){
+                user.textContent = newName
+                    let newcredentials = {
+                        name: newName,
+                        email: userNew,
+                        password: passwordNew,
+                        picPath: uploadedpic
+                    }
+    
+                    userCredentials.push(newcredentials);
+                    
+                
+                    signup.style.display = "none";
+                    mainPage.style.display = "none";
+                    login.style.display = "block";
+                }else{
+                    alert("password dont match")
+                }
+            }else{
+                alert("please fill all text")
+            }
+    
         }
-
-        userCredentials.push(newcredentials);
         
-    
-        signup.style.display = "none";
-        mainPage.style.display = "none";
-        login.style.display = "block";
-    }else{
-        alert("password dont match")
-    }
-}else{
-    alert("please fill all text")
-}
-
+        
+  
 }
 let picture = document.getElementById("loded")
 
@@ -343,12 +364,22 @@ image.forEach((imag)=>{
 })
 
 let forgetPassword = document.getElementById("forgetPassword");
-// console.log(forgetPassword)
+
 forgetPassword.addEventListener("click", ()=>{
     let clint = email.value
+
     for(let i = 0;i<userCredentials.length;i++){
         if(userCredentials[i].email.toLowerCase() === clint.toLowerCase()){
-            alert("your password is" + userCredentials[i].password)
+           let passwordText = document.getElementById("input-password")
+           passwordText.textContent = "enter a new password";
+
+            console.log(userCredentials)
+
+
+           i = userCredentials.length 
+        }else if(clint == ""){
+            alert("enter the username, to retrive a password for!!!")
+            i = userCredentials.length
         }
     }
 })
