@@ -55,33 +55,43 @@ backLogin.addEventListener('click',(e)=>{
     e.preventDefault()
     backb()
 })
+let f = 0;
+
+let isLogged = false;
+
+function validate(){
+    let username = email.value
+    let passcode = password.value
+        while(f<userCredentials.length){
+            if(passcode === userCredentials[f].password&&username===userCredentials[f].email){
+                
+                user.textContent = userCredentials[f].name
+                picture.src = userCredentials[f].picPath;
+                f = 2
+               return isLogged = true;
+            }
+            console.log(f)
+            f++; 
+
+        }
+
+}
 
 
 function landingP(){
-    
+    validate() 
 
-    if(email.value && password.value){
-        let username = email.value
-        let passcode = password.value
-        for(let i = 0; i< userCredentials.length; i++){
-            if(userCredentials[i].email == username && userCredentials[i].password == passcode){
-                user.textContent = userCredentials[i].name
-                picture.src = userCredentials[i].picPath;
-                signup.style.display = "none";
-                mainPage.style.display = "flex";
-                login.style.display = "none";
-            }else if(userCredentials[i].email == username&&userCredentials[i].password != passcode){
-                alert("enter the correct password")
-                i = userCredentials.length;
-            }else if(userCredentials[i].email != username&&userCredentials[i].password != passcode){
-                alert("the the username does not exist, please sign in instead")
-                i = userCredentials.length;
-            }
-        }
-        
-    }else{
-        alert("please enter correct credentials")
-    }
+
+     if(isLogged){
+   
+        signup.style.display = "none";
+            mainPage.style.display = "flex";
+        login.style.display = "none";
+    }else if(!isLogged){
+        alert("enter the correct password")
+        f=0;
+    }    
+  
 }
 
 logout.addEventListener("click", (e)=>{
@@ -90,9 +100,9 @@ logout.addEventListener("click", (e)=>{
             signup.style.display = "none";
             mainPage.style.display = "none";
             login.style.display = "block";
+            isLogged = false;
             
-            
-        })
+})
 
 
         // sign up logic
@@ -106,7 +116,6 @@ logout.addEventListener("click", (e)=>{
         let  passwordNew = newPassword.value
         let  repassword = confirmPassword.value
 
-        console.log()
 
         for(let i = 0;i<userCredentials.length;i++){
             if(userNew.trim() == userCredentials[i].email.trim()){
