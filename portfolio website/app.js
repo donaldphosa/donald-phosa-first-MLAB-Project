@@ -33,6 +33,55 @@ let userCredentials = [
     }
 ]
 
+let forgetPassword = document.getElementById("forgetPassword");
+let newpassdiv = document.getElementById("retrivePass");
+let w = 0
+forgetPassword.addEventListener("click", ()=>{
+    
+    let username = email.value
+    if(username){
+    for(let i = 0; i<userCredentials.length;i++){
+        if(userCredentials[i].email == username){
+            newpassdiv.style.display = "flex"
+            newpassdiv.style.zIndex = "999"
+            w = i
+            i = userCredentials.length
+        }else{
+            alert("cant find the user name")
+            i = userCredentials.length
+        }
+    }}else{
+        alert("please enter the username first")
+    }
+
+})
+let newRetPassword;
+let newRetrivePass = document.getElementById("newPassRetrive");
+let Retbtn = document.getElementById("newPassBtn");
+
+function pass(w){
+  
+    newRetPassword = newRetrivePass.value
+    newpassdiv.style.display = "none"
+
+    let newCred = {
+        name: userCredentials[w].name,
+        email: userCredentials[w].email,
+        password: newRetPassword,
+        picPath: userCredentials[w].picPath
+    }
+    picture.src = userCredentials[w].picPath
+    userCredentials.splice(w,1)
+    userCredentials.push(newCred)
+    signup.style.display = "none";
+    mainPage.style.display = "flex";
+    login.style.display = "none";
+    alert("password saved")
+    
+}
+
+Retbtn.addEventListener("click",()=>pass(w))
+
 function createAcc(){
     
     mainPage.style.display = "none";
@@ -55,43 +104,35 @@ backLogin.addEventListener('click',(e)=>{
     e.preventDefault()
     backb()
 })
-let f = 0;
 
 let isLogged = false;
 
-function validate(){
+function accessPoint(){
     let username = email.value
     let passcode = password.value
-        while(f<userCredentials.length){
-            if(passcode === userCredentials[f].password&&username===userCredentials[f].email){
-                
-                user.textContent = userCredentials[f].name
-                picture.src = userCredentials[f].picPath;
-                f = 2
-               return isLogged = true;
-            }
-            console.log(f)
-            f++; 
 
+    for(let i = 0; i< userCredentials.length; i++){
+          if(userCredentials[i].email == username && userCredentials[i].password == passcode){
+            user.textContent = userCredentials[i].name
+            picture.src = userCredentials[i].picPath;
+            isLogged = true;
+          }
         }
 
 }
 
-
 function landingP(){
-    validate() 
+    accessPoint();
 
-
-     if(isLogged){
-   
+    if (isLogged){
         signup.style.display = "none";
-            mainPage.style.display = "flex";
+        mainPage.style.display = "flex";
         login.style.display = "none";
-    }else if(!isLogged){
-        alert("enter the correct password")
-        f=0;
-    }    
-  
+    }else{
+        alert("wrong login details")
+    }
+
+
 }
 
 logout.addEventListener("click", (e)=>{
@@ -100,9 +141,9 @@ logout.addEventListener("click", (e)=>{
             signup.style.display = "none";
             mainPage.style.display = "none";
             login.style.display = "block";
-            isLogged = false;
+            isLogged = false
             
-})
+        })
 
 
         // sign up logic
@@ -116,6 +157,7 @@ logout.addEventListener("click", (e)=>{
         let  passwordNew = newPassword.value
         let  repassword = confirmPassword.value
 
+        
 
         for(let i = 0;i<userCredentials.length;i++){
             if(userNew.trim() == userCredentials[i].email.trim()){
@@ -147,7 +189,7 @@ logout.addEventListener("click", (e)=>{
     
         }
         
-        
+      
   
 }
 let picture = document.getElementById("loded")
@@ -226,7 +268,6 @@ let bookDetails = [
 const mainReadSection = document.getElementById("read-books-section");
 let mainRow = document.createElement("div")
 mainRow.classList.add('main-row')
-// let bigRow = document.createElement("div")
  let bigRow = document.getElementById("scroll")
 
 bookDetails.forEach((items)=>{
@@ -299,18 +340,14 @@ bookDetails.forEach((items)=>{
 
    
 })
-// mainRow.style.transform = 'translateX(600px)'
 bigRow.append(mainRow)
 mainReadSection.append(bigRow)
 
-// bigRow.append(mainRow)
-// bigRow.classList.add('scrollClass')
-//     console.log(bigRow);
 
 let nextbtn = document.getElementById("nextCard")
 let prevbtn = document.getElementById("prevCard")
 let x= 4;
-let shiftSize = 305 + bookDetails.length*10
+let shiftSize = window.innerWidth/5.4 + bookDetails.length*10
 let counter = 0
 z = (bookDetails.length) - 4
 prevbtn.style.display = "none"
@@ -372,25 +409,4 @@ image.forEach((imag)=>{
   })
 })
 
-let forgetPassword = document.getElementById("forgetPassword");
-
-forgetPassword.addEventListener("click", ()=>{
-    let clint = email.value
-
-    for(let i = 0;i<userCredentials.length;i++){
-        if(userCredentials[i].email.toLowerCase() === clint.toLowerCase()){
-           let passwordText = document.getElementById("input-password")
-           passwordText.textContent = "enter a new password";
-
-            console.log(userCredentials)
-
-
-           i = userCredentials.length 
-        }else if(clint == ""){
-            alert("enter the username, to retrive a password for!!!")
-            i = userCredentials.length
-        }
-    }
-})
-
-
+// this is the one
